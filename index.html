@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+  <title>Wizard Form</title>
+</head>
+<body>
+  <div class="wizard-form">
+    <form id="wizardForm">
+      <div class="wizard-step active" id="step1">
+        <h2>Step 1</h2>
+        <input type="text" name="fname" placeholder="Enter your first name" required>
+        <input type="text" name="lname" placeholder="Enter your last name" required>
+        <input type="date" name="dob" placeholder="Enter your date of birth" required>
+        <div class="wizard-buttons">
+          <button type="button" onclick="nextStep(2)">Next</button>
+        </div>
+      </div>
+      <div class="wizard-step" id="step2">
+        <h2>Step 2</h2>
+        <input type="email" name="email" placeholder="Enter your email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$">
+        <input type="tel" name="phone" placeholder="Enter your phone number" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+        <input type="text" name="occupation" placeholder="Enter your occupation" required>
+        <input type="text" name="address" placeholder="Enter your address" required>
+        <div class="wizard-buttons">
+          <button type="button" onclick="prevStep(1)">Previous</button>
+          <button type="button" onclick="nextStep(3)">Next</button>
+        </div>
+      </div>
+      <div class="wizard-step" id="step3">
+        <h2>Step 3</h2>
+        <input type="text" name="hobby" placeholder="Enter subject" required>
+        <textarea name="message" placeholder="Enter your message" required></textarea>
+        <div class="wizard-buttons">
+          <button type="button" onclick="prevStep(2)">Previous</button>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+    </form>
+  </div>
+  
+
+<script src="script.js"></script>
+
+</body>
+</html>
